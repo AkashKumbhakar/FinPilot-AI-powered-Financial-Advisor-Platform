@@ -2,7 +2,7 @@ const { Server } = require("socket.io");
 let io;
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://fin-pilot-ai-powered-financial-advisor-platform-el04vd4gx.vercel.app"
+  process.env.FRONTEND_URL
 ];
 const initSocket = (server) => {
   io = new Server(server, {
