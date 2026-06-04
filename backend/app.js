@@ -8,8 +8,13 @@ const errorMiddleware = require("./app/middlewares/errorMiddleware");
 
 const app = express();
 DatabaseConnection();
+//cors
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://fin-pilot-ai-powered-financial-advisor-platform-p9v5eh4cm.vercel.app/",
+];
 app.use(cors({
-    origin: process.env.CLIENT_URL,
+    origin: allowedOrigins,
     credentials: true
 }));
 app.use(express.json());
