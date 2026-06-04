@@ -12,6 +12,7 @@ DatabaseConnection();
 const allowedOrigins = [
   "http://localhost:3000",
   "https://fin-pilot-ai-powered-financial-advisor-platform-p9v5eh4cm.vercel.app",
+  "https://fin-pilot-ai-powered-financial-advisor-platform-73csu73qh.vercel.app"
 ];
 app.use(cors({
     origin: allowedOrigins,

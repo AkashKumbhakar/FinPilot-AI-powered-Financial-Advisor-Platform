@@ -3,6 +3,7 @@ let io;
 const allowedOrigins = [
   "http://localhost:3000",
   "https://fin-pilot-ai-powered-financial-advisor-platform-p9v5eh4cm.vercel.app",
+  "https://fin-pilot-ai-powered-financial-advisor-platform-73csu73qh.vercel.app"
 ];
 const initSocket = (server) => {
   io = new Server(server, {
