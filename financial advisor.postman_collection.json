@@ -1,0 +1,2727 @@
+{
+  "info": {
+    "_postman_id": "952943d1-584d-4bbc-984f-fe17a068630f",
+    "name": "financial advisor",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48383734",
+    "_collection_link": "https://go.postman.co/collection/48383734-952943d1-584d-4bbc-984f-fe17a068630f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "auth register",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"rahul\",\r\n    \"email\": \"rahul512@yopmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "auth register",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"rahul\",\r\n    \"email\": \"rahul512@yopmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "register"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "290"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"122-ssqT208kKBDTLSS1n93F+e0/bjU\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 24 May 2026 09:06:42 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully. OTP sent to your email.\",\n    \"data\": {\n        \"name\": \"rahul\",\n        \"email\": \"rahul512@yopmail.com\",\n        \"role\": \"user\",\n        \"is_verified\": false,\n        \"_id\": \"6a12bf9ec708f516d1e0ae64\",\n        \"createdAt\": \"2026-05-24T09:06:38.139Z\",\n        \"updatedAt\": \"2026-05-24T09:06:38.139Z\",\n        \"__v\": 0\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "auth verify-otp",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"rahul512@yopmail.com\",\r\n    \"otp\": \"233224\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/verify-otp",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "verify-otp"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "auth verify-otp",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"rahul512@yopmail.com\",\r\n    \"otp\": \"233224\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/verify-otp",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "verify-otp"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "56"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"38-oYZCwGirBsI2TcYe2Zke76tAja8\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 24 May 2026 09:08:32 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Email verified successfully\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "auth login",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"rahul512@yopmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "auth login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"rahul512@yopmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc3OTYxMzc2OCwiZXhwIjoxNzgwMjE4NTY4fQ.LolVlSlnxRzckHYK7_6oqZxwJagii0xPxlPoQX4upzM; Max-Age=604800; Path=/; Expires=Sun, 31 May 2026 09:09:28 GMT; HttpOnly; SameSite=Strict"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "440"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1b8-I3pTKOMn5Owkg5iSaEFdE6VTA9s\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 24 May 2026 09:09:28 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc3OTYxMzc2OCwiZXhwIjoxNzc5NjE0NjY4fQ.KEKPlLeWjSYJXNxk6y1eRzeeED1iHNbKU5YLdNirmv4\",\n    \"user\": {\n        \"_id\": \"6a12bf9ec708f516d1e0ae64\",\n        \"name\": \"rahul\",\n        \"email\": \"rahul512@yopmail.com\",\n        \"role\": \"user\",\n        \"is_verified\": true,\n        \"createdAt\": \"2026-05-24T09:06:38.139Z\",\n        \"updatedAt\": \"2026-05-24T09:09:28.308Z\",\n        \"__v\": 0\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "get profile",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc3OTYxMzc2OCwiZXhwIjoxNzc5NjE0NjY4fQ.KEKPlLeWjSYJXNxk6y1eRzeeED1iHNbKU5YLdNirmv4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "profile"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get profile",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "profile"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "412"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"19c-y/hRoiTp8WZl0kpncD75pzd//4c\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 24 May 2026 09:11:00 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6a12bf9ec708f516d1e0ae64\",\n        \"name\": \"rahul\",\n        \"email\": \"rahul512@yopmail.com\",\n        \"role\": \"user\",\n        \"is_verified\": true,\n        \"createdAt\": \"2026-05-24T09:06:38.139Z\",\n        \"updatedAt\": \"2026-05-24T09:09:28.308Z\",\n        \"__v\": 0,\n        \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc3OTYxMzc2OCwiZXhwIjoxNzgwMjE4NTY4fQ.LolVlSlnxRzckHYK7_6oqZxwJagii0xPxlPoQX4upzM\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "auth forgot-password",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"rahul512@yopmail.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/forgot-password",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "forgot-password"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "auth forgot-password",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"rahul512@yopmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/forgot-password",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "forgot-password"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "54"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"36-ujYcM9HatqNlWKhhwFUnFwMJJyE\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 24 May 2026 10:14:43 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Password reset email sent\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "auth reset-password",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"password\":\"12345678\",\r\n    \"confirm_password\":\"12345678\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/reset-password/1db70d5eeed34b6c78e4d4fdfbd68f9e7bbe8289",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "reset-password",
+            "1db70d5eeed34b6c78e4d4fdfbd68f9e7bbe8289"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "auth reset-password",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"password\":\"12345678\",\r\n    \"confirm_password\":\"12345678\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/reset-password/1db70d5eeed34b6c78e4d4fdfbd68f9e7bbe8289",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "reset-password",
+                "1db70d5eeed34b6c78e4d4fdfbd68f9e7bbe8289"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "54"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"36-DmkosvLTnG1+sVupJ33Sk0MDofI\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 24 May 2026 10:17:10 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Password reset successful\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "auth refresh-token",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc3OTYxNzg5OSwiZXhwIjoxNzc5NjE4Nzk5fQ.L1cLtZJb7CUy2TlP5NcjHk8mj1yONQVuSj6XDAERcUM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"rahul512@yopmail.com\",\r\n    \"password\": \"123456\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/refresh-token",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "refresh-token"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "auth refresh-token",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"rahul512@yopmail.com\",\r\n    \"password\": \"123456\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/refresh-token",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "refresh-token"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "204"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"cc-XduGTXIASseIWFdp3rV7yukcBTg\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 24 May 2026 10:19:13 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc3OTYxNzk1MywiZXhwIjoxNzc5NjE4ODUzfQ.rB-w-zp2WR8K3fhtFXtIxdW0bbr1Xc33K7EoxQ1dWP8\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "expense create",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc3OTYxODg1MiwiZXhwIjoxNzc5NjE5NzUyfQ.H19MX5ManyjCSYRZtZ5O-N38ErkTBc1W9DVCmIs8imc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\":\"Swiggy Order\",\r\n    \"amount\":450,\r\n    \"category\":\"Food\",\r\n    \"paymentMethod\":\"UPI\",\r\n    \"notes\":\"Dinner order\",\r\n    \"isRecurring\":false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/expense/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "expense",
+            "create"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "expense create",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"Swiggy Order\",\r\n    \"amount\":450,\r\n    \"category\":\"Food\",\r\n    \"paymentMethod\":\"UPI\",\r\n    \"notes\":\"Dinner order\",\r\n    \"isRecurring\":false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/expense/create",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "expense",
+                "create"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "400"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"190-vkLAOKYy1hxhrIqDQidmEw/GWP0\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 24 May 2026 10:34:33 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Expense created successfully\",\n    \"data\": {\n        \"user\": \"6a12bf9ec708f516d1e0ae64\",\n        \"title\": \"Swiggy Order\",\n        \"amount\": 450,\n        \"category\": \"Food\",\n        \"paymentMethod\": \"UPI\",\n        \"notes\": \"Dinner order\",\n        \"expenseDate\": \"2026-05-24T10:34:32.826Z\",\n        \"isRecurring\": false,\n        \"recurringType\": null,\n        \"_id\": \"6a12d438f3817f8dd8a37efb\",\n        \"createdAt\": \"2026-05-24T10:34:32.826Z\",\n        \"updatedAt\": \"2026-05-24T10:34:32.826Z\",\n        \"__v\": 0\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "get all expense",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc3OTYxODg1MiwiZXhwIjoxNzc5NjE5NzUyfQ.H19MX5ManyjCSYRZtZ5O-N38ErkTBc1W9DVCmIs8imc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\":\"Swiggy Order\",\r\n    \"amount\":450,\r\n    \"category\":\"Food\",\r\n    \"paymentMethod\":\"UPI\",\r\n    \"notes\":\"Dinner order\",\r\n    \"isRecurring\":false\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/expense/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "expense",
+            "all"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get all expense",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"Swiggy Order\",\r\n    \"amount\":450,\r\n    \"category\":\"Food\",\r\n    \"paymentMethod\":\"UPI\",\r\n    \"notes\":\"Dinner order\",\r\n    \"isRecurring\":false\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/expense/all",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "expense",
+                "all"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1782"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"6f6-mAxqrh8BsVfF3kN98nq+jb2ENU4\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 24 May 2026 10:40:24 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"count\": 5,\n    \"data\": [\n        {\n            \"_id\": \"6a12d591f3817f8dd8a37eff\",\n            \"user\": \"6a12bf9ec708f516d1e0ae64\",\n            \"title\": \"SIP\",\n            \"amount\": 5000,\n            \"category\": \"Investment\",\n            \"paymentMethod\": \"Net Banking\",\n            \"notes\": \"Nifty 50 SIP\",\n            \"expenseDate\": \"2026-05-24T10:40:17.297Z\",\n            \"isRecurring\": true,\n            \"recurringType\": \"Monthly\",\n            \"createdAt\": \"2026-05-24T10:40:17.298Z\",\n            \"updatedAt\": \"2026-05-24T10:40:17.298Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a12d537f3817f8dd8a37efe\",\n            \"user\": \"6a12bf9ec708f516d1e0ae64\",\n            \"title\": \"Netflix Subscription\",\n            \"amount\": 999,\n            \"category\": \"Entertainment\",\n            \"paymentMethod\": \"UPI\",\n            \"notes\": \"Netflix Subscription\",\n            \"expenseDate\": \"2026-05-24T10:38:47.189Z\",\n            \"isRecurring\": false,\n            \"recurringType\": null,\n            \"createdAt\": \"2026-05-24T10:38:47.189Z\",\n            \"updatedAt\": \"2026-05-24T10:38:47.189Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a12d4fef3817f8dd8a37efd\",\n            \"user\": \"6a12bf9ec708f516d1e0ae64\",\n            \"title\": \"Electricity Bill\",\n            \"amount\": 4860,\n            \"category\": \"Bills\",\n            \"paymentMethod\": \"Net Banking\",\n            \"notes\": \"Electricity Bill\",\n            \"expenseDate\": \"2026-05-24T10:37:50.475Z\",\n            \"isRecurring\": false,\n            \"recurringType\": null,\n            \"createdAt\": \"2026-05-24T10:37:50.475Z\",\n            \"updatedAt\": \"2026-05-24T10:37:50.475Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a12d4c1f3817f8dd8a37efc\",\n            \"user\": \"6a12bf9ec708f516d1e0ae64\",\n            \"title\": \"Amazon Order\",\n            \"amount\": 64000,\n            \"category\": \"Shopping\",\n            \"paymentMethod\": \"Credit Card\",\n            \"notes\": \"Laptop order\",\n            \"expenseDate\": \"2026-05-24T10:36:49.128Z\",\n            \"isRecurring\": false,\n            \"recurringType\": null,\n            \"createdAt\": \"2026-05-24T10:36:49.128Z\",\n            \"updatedAt\": \"2026-05-24T10:36:49.128Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a12d438f3817f8dd8a37efb\",\n            \"user\": \"6a12bf9ec708f516d1e0ae64\",\n            \"title\": \"Swiggy Order\",\n            \"amount\": 450,\n            \"category\": \"Food\",\n            \"paymentMethod\": \"UPI\",\n            \"notes\": \"Dinner order\",\n            \"expenseDate\": \"2026-05-24T10:34:32.826Z\",\n            \"isRecurring\": false,\n            \"recurringType\": null,\n            \"createdAt\": \"2026-05-24T10:34:32.826Z\",\n            \"updatedAt\": \"2026-05-24T10:34:32.826Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "expense monthly-analytics",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc3OTYxODg1MiwiZXhwIjoxNzc5NjE5NzUyfQ.H19MX5ManyjCSYRZtZ5O-N38ErkTBc1W9DVCmIs8imc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\":\"Swiggy Order\",\r\n    \"amount\":450,\r\n    \"category\":\"Food\",\r\n    \"paymentMethod\":\"UPI\",\r\n    \"notes\":\"Dinner order\",\r\n    \"isRecurring\":false\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/expense/monthly-analytics",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "expense",
+            "monthly-analytics"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "expense monthly-analytics",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"Swiggy Order\",\r\n    \"amount\":450,\r\n    \"category\":\"Food\",\r\n    \"paymentMethod\":\"UPI\",\r\n    \"notes\":\"Dinner order\",\r\n    \"isRecurring\":false\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/expense/monthly-analytics",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "expense",
+                "monthly-analytics"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "364"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"16c-vgU1yRgTW8veC2m/dv7iOPX6Ay4\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 24 May 2026 10:43:39 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"month\": \"May\",\n    \"totalExpense\": 75309,\n    \"totalTransactions\": 5,\n    \"categoryBreakdown\": [\n        {\n            \"category\": \"Bills\",\n            \"total\": 4860,\n            \"transactions\": 1\n        },\n        {\n            \"category\": \"Food\",\n            \"total\": 450,\n            \"transactions\": 1\n        },\n        {\n            \"category\": \"Shopping\",\n            \"total\": 64000,\n            \"transactions\": 1\n        },\n        {\n            \"category\": \"Investment\",\n            \"total\": 5000,\n            \"transactions\": 1\n        },\n        {\n            \"category\": \"Entertainment\",\n            \"total\": 999,\n            \"transactions\": 1\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "expense last-6-months",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc3OTYxODg1MiwiZXhwIjoxNzc5NjE5NzUyfQ.H19MX5ManyjCSYRZtZ5O-N38ErkTBc1W9DVCmIs8imc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/expense/last-6-months",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "expense",
+            "last-6-months"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "expense last-6-months",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/expense/last-6-months",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "expense",
+                "last-6-months"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "74"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"4a-OCGI7nD28IhG8qXtCEf/71OrAvo\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 24 May 2026 10:48:18 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"month\": \"May\",\n            \"year\": 2026,\n            \"totalExpense\": 75309\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "expense dashboard-summary",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc3OTYxOTg4MSwiZXhwIjoxNzc5NjIwNzgxfQ.mPNb6MKI6H1IKGa6TgBVuIsWIkbNAyyu7e_Da0U-zew",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/expense/dashboard-summary",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "expense",
+            "dashboard-summary"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "expense dashboard-summary",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/expense/dashboard-summary",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "expense",
+                "dashboard-summary"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "2131"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"853-icXzR6wK01YIbsytlhpR59yrqV0\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 24 May 2026 10:51:34 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"totalExpense\": 75309,\n        \"totalTransactions\": 5,\n        \"thisMonthExpense\": 75309,\n        \"recentExpenses\": [\n            {\n                \"_id\": \"6a12d591f3817f8dd8a37eff\",\n                \"user\": \"6a12bf9ec708f516d1e0ae64\",\n                \"title\": \"SIP\",\n                \"amount\": 5000,\n                \"category\": \"Investment\",\n                \"paymentMethod\": \"Net Banking\",\n                \"notes\": \"Nifty 50 SIP\",\n                \"expenseDate\": \"2026-05-24T10:40:17.297Z\",\n                \"isRecurring\": true,\n                \"recurringType\": \"Monthly\",\n                \"createdAt\": \"2026-05-24T10:40:17.298Z\",\n                \"updatedAt\": \"2026-05-24T10:40:17.298Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6a12d537f3817f8dd8a37efe\",\n                \"user\": \"6a12bf9ec708f516d1e0ae64\",\n                \"title\": \"Netflix Subscription\",\n                \"amount\": 999,\n                \"category\": \"Entertainment\",\n                \"paymentMethod\": \"UPI\",\n                \"notes\": \"Netflix Subscription\",\n                \"expenseDate\": \"2026-05-24T10:38:47.189Z\",\n                \"isRecurring\": false,\n                \"recurringType\": null,\n                \"createdAt\": \"2026-05-24T10:38:47.189Z\",\n                \"updatedAt\": \"2026-05-24T10:38:47.189Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6a12d4fef3817f8dd8a37efd\",\n                \"user\": \"6a12bf9ec708f516d1e0ae64\",\n                \"title\": \"Electricity Bill\",\n                \"amount\": 4860,\n                \"category\": \"Bills\",\n                \"paymentMethod\": \"Net Banking\",\n                \"notes\": \"Electricity Bill\",\n                \"expenseDate\": \"2026-05-24T10:37:50.475Z\",\n                \"isRecurring\": false,\n                \"recurringType\": null,\n                \"createdAt\": \"2026-05-24T10:37:50.475Z\",\n                \"updatedAt\": \"2026-05-24T10:37:50.475Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6a12d4c1f3817f8dd8a37efc\",\n                \"user\": \"6a12bf9ec708f516d1e0ae64\",\n                \"title\": \"Amazon Order\",\n                \"amount\": 64000,\n                \"category\": \"Shopping\",\n                \"paymentMethod\": \"Credit Card\",\n                \"notes\": \"Laptop order\",\n                \"expenseDate\": \"2026-05-24T10:36:49.128Z\",\n                \"isRecurring\": false,\n                \"recurringType\": null,\n                \"createdAt\": \"2026-05-24T10:36:49.128Z\",\n                \"updatedAt\": \"2026-05-24T10:36:49.128Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6a12d438f3817f8dd8a37efb\",\n                \"user\": \"6a12bf9ec708f516d1e0ae64\",\n                \"title\": \"Swiggy Order\",\n                \"amount\": 450,\n                \"category\": \"Food\",\n                \"paymentMethod\": \"UPI\",\n                \"notes\": \"Dinner order\",\n                \"expenseDate\": \"2026-05-24T10:34:32.826Z\",\n                \"isRecurring\": false,\n                \"recurringType\": null,\n                \"createdAt\": \"2026-05-24T10:34:32.826Z\",\n                \"updatedAt\": \"2026-05-24T10:34:32.826Z\",\n                \"__v\": 0\n            }\n        ],\n        \"categoryBreakdown\": [\n            {\n                \"category\": \"Shopping\",\n                \"total\": 64000\n            },\n            {\n                \"category\": \"Investment\",\n                \"total\": 5000\n            },\n            {\n                \"category\": \"Bills\",\n                \"total\": 4860\n            },\n            {\n                \"category\": \"Entertainment\",\n                \"total\": 999\n            },\n            {\n                \"category\": \"Food\",\n                \"total\": 450\n            }\n        ],\n        \"monthlyTrend\": [\n            {\n                \"month\": \"May\",\n                \"year\": 2026,\n                \"totalExpense\": 75309\n            }\n        ]\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "expense ai-insights",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc3OTYxOTg4MSwiZXhwIjoxNzc5NjIwNzgxfQ.mPNb6MKI6H1IKGa6TgBVuIsWIkbNAyyu7e_Da0U-zew",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/expense/ai-insights",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "expense",
+            "ai-insights"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "expense ai-insights",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/expense/ai-insights",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "expense",
+                "ai-insights"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "306"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"132-QiCtnYB41Co7w9n5xY+jLZu9nvk\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 24 May 2026 10:55:54 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"totalExpense\": 75309,\n    \"insights\": [\n        \"Your highest spending category is Shopping with ₹64000.\",\n        \"You are spending heavily on Shopping. Consider reducing it.\",\n        \"Most of your transactions were done using Credit Card.\",\n        \"Your monthly expenses are quite high. Consider creating a stricter budget.\"\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "income analytics summary",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc3OTYyMzY4MCwiZXhwIjoxNzc5NjI0NTgwfQ.GudMKXTnTF8JkvRoo8r_bsDOyyxA3lOdhr0PfCPJNYQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/income/analytics/summary",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "income",
+            "analytics",
+            "summary"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "income analytics summary",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/income/analytics/summary",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "income",
+                "analytics",
+                "summary"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "127"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"7f-8XXHNLiO5xvL8EWXx9I8jxF4lHg\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 24 May 2026 12:02:37 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"totalIncome\": 140000,\n    \"totalExpense\": 75309,\n    \"totalSavings\": 64691,\n    \"savingsRate\": \"46.21%\",\n    \"financialHealth\": \"Good\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "budget tracking",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc3OTY5NzUwOSwiZXhwIjoxNzc5Njk4NDA5fQ._VGStxrs_UhNcoTdqt3AOe8_xp3jBj7GI1r28q6Anjk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"category\":\"Food\",\r\n   \"amount\":10000,\r\n   \"month\":5,\r\n   \"year\":2026\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/budget/tracking",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "budget",
+            "tracking"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "budget tracking",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"category\":\"Food\",\r\n   \"amount\":10000,\r\n   \"month\":5,\r\n   \"year\":2026\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/budget/tracking",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "budget",
+                "tracking"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "126"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"7e-NeFvRUN9cJVMYpnJygWXqii4euw\""
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 27 May 2026 05:49:38 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"month\": 5,\n    \"year\": 2026,\n    \"data\": [\n        {\n            \"category\": \"Food\",\n            \"budget\": 10000,\n            \"spent\": 0,\n            \"remaining\": 10000,\n            \"status\": \"Safe\"\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "get all notifications",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMWU5ZmE0NmNkZjdiYjI4NTQ1ZmE4OSIsImlhdCI6MTc4MDY0NDE2MCwiZXhwIjoxNzgwNjQ1MDYwfQ.sjQYvxWi826uZYH3ilij1LGRK4P1502RJGTJ2s6g1s4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"category\":\"Food\",\r\n   \"amount\":10000,\r\n   \"month\":5,\r\n   \"year\":2026\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/notification/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "notification",
+            "all"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get all notifications",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"category\":\"Food\",\r\n   \"amount\":10000,\r\n   \"month\":5,\r\n   \"year\":2026\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/notification/all",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "notification",
+                "all"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "10266"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"281a-vS2CzgeWf/O71Uogu2i2ic8LXAA\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 05 Jun 2026 07:22:53 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"count\": 39,\n    \"data\": [\n        {\n            \"_id\": \"6a1fcadae57f19d99fa97c1a\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:34:02.298Z\",\n            \"updatedAt\": \"2026-06-03T06:34:02.298Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fcabcfef037b9e581fc83\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:33:32.403Z\",\n            \"updatedAt\": \"2026-06-03T06:33:32.403Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fcaaad15c6885f7423248\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:33:15.024Z\",\n            \"updatedAt\": \"2026-06-03T06:33:15.024Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fca518f35b8806948ca42\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:31:45.498Z\",\n            \"updatedAt\": \"2026-06-03T06:31:45.498Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fca488f35b8806948ca41\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:31:36.884Z\",\n            \"updatedAt\": \"2026-06-03T06:31:36.884Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fc9f60354097c6e30fa5d\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:30:14.558Z\",\n            \"updatedAt\": \"2026-06-03T06:30:14.558Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fc9d40354097c6e30fa5c\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:29:40.059Z\",\n            \"updatedAt\": \"2026-06-03T06:29:40.059Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fc97147a22bae57f0b3da\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:28:01.789Z\",\n            \"updatedAt\": \"2026-06-03T06:28:01.789Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fc96b47a22bae57f0b3d9\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:27:55.647Z\",\n            \"updatedAt\": \"2026-06-03T06:27:55.647Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fc96247a22bae57f0b3d8\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:27:46.889Z\",\n            \"updatedAt\": \"2026-06-03T06:27:46.889Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fc93970b4beacf364609a\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:27:05.095Z\",\n            \"updatedAt\": \"2026-06-03T06:27:05.095Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fc92f70b4beacf3646099\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:26:55.115Z\",\n            \"updatedAt\": \"2026-06-03T06:26:55.115Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fc92370b4beacf3646098\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:26:43.710Z\",\n            \"updatedAt\": \"2026-06-03T06:26:43.710Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fc92270b4beacf3646097\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:26:42.768Z\",\n            \"updatedAt\": \"2026-06-03T06:26:42.768Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fc8e070b4beacf3646096\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:25:36.057Z\",\n            \"updatedAt\": \"2026-06-03T06:25:36.057Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fc70ecd24a4af1da94a3e\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:17:50.030Z\",\n            \"updatedAt\": \"2026-06-03T06:17:50.030Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fc6ddc354fb054d033b8b\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:17:01.752Z\",\n            \"updatedAt\": \"2026-06-03T06:17:01.752Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1fc662e988c5389e37812c\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-03T06:14:58.405Z\",\n            \"updatedAt\": \"2026-06-03T06:14:58.405Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea4b16cdf7bb28545faa7\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:38:57.753Z\",\n            \"updatedAt\": \"2026-06-02T09:38:57.753Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea49f6cdf7bb28545faa6\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:38:39.992Z\",\n            \"updatedAt\": \"2026-06-02T09:38:39.992Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea3de6cdf7bb28545faa5\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:35:26.231Z\",\n            \"updatedAt\": \"2026-06-02T09:35:26.231Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea30a6cdf7bb28545faa4\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:31:54.197Z\",\n            \"updatedAt\": \"2026-06-02T09:31:54.197Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea2ff6cdf7bb28545faa3\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:31:43.535Z\",\n            \"updatedAt\": \"2026-06-02T09:31:43.535Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea2ff6cdf7bb28545faa2\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Added\",\n            \"message\": \"₹10000 added for Investment\",\n            \"type\": \"System\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:31:43.032Z\",\n            \"updatedAt\": \"2026-06-02T09:31:43.032Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea2e86cdf7bb28545faa0\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:31:20.669Z\",\n            \"updatedAt\": \"2026-06-02T09:31:20.669Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea2e86cdf7bb28545fa9f\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:31:20.272Z\",\n            \"updatedAt\": \"2026-06-02T09:31:20.272Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea1946cdf7bb28545fa9e\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:25:40.105Z\",\n            \"updatedAt\": \"2026-06-02T09:25:40.105Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea1936cdf7bb28545fa9d\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:25:39.570Z\",\n            \"updatedAt\": \"2026-06-02T09:25:39.570Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea0c76cdf7bb28545fa9c\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Recurring Added\",\n            \"message\": \"₹5000 added for Investment\",\n            \"type\": \"System\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:22:15.554Z\",\n            \"updatedAt\": \"2026-06-02T09:22:15.554Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea08b6cdf7bb28545fa9a\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:21:15.847Z\",\n            \"updatedAt\": \"2026-06-02T09:21:15.847Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea0816cdf7bb28545fa99\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:21:05.478Z\",\n            \"updatedAt\": \"2026-06-02T09:21:05.478Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea0816cdf7bb28545fa98\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:21:05.106Z\",\n            \"updatedAt\": \"2026-06-02T09:21:05.106Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea0766cdf7bb28545fa97\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Warning\",\n            \"message\": \"You have used 80% of your Shopping budget.\",\n            \"type\": \"Budget\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:20:54.161Z\",\n            \"updatedAt\": \"2026-06-02T09:20:54.161Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea0756cdf7bb28545fa96\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Added\",\n            \"message\": \"₹10000 added for Shopping\",\n            \"type\": \"System\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:20:53.721Z\",\n            \"updatedAt\": \"2026-06-02T09:20:53.721Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea0646cdf7bb28545fa94\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Budget Added\",\n            \"message\": \"₹4000 added for Food\",\n            \"type\": \"System\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:20:36.761Z\",\n            \"updatedAt\": \"2026-06-02T09:20:36.761Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea0406cdf7bb28545fa92\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Expense Added\",\n            \"message\": \"₹8000 added for Shopping\",\n            \"type\": \"System\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:20:00.800Z\",\n            \"updatedAt\": \"2026-06-02T09:20:00.800Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea0246cdf7bb28545fa90\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Expense Added\",\n            \"message\": \"₹4000 added for Bills\",\n            \"type\": \"System\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:19:32.589Z\",\n            \"updatedAt\": \"2026-06-02T09:19:32.589Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1ea0036cdf7bb28545fa8e\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Income Added\",\n            \"message\": \"₹5000 added for Rental\",\n            \"type\": \"System\",\n            \"isRead\": false,\n            \"createdAt\": \"2026-06-02T09:18:59.570Z\",\n            \"updatedAt\": \"2026-06-02T09:18:59.570Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1e9fe56cdf7bb28545fa8c\",\n            \"user\": \"6a1e9fa46cdf7bb28545fa89\",\n            \"title\": \"Income Added\",\n            \"message\": \"₹40000 added for Salary\",\n            \"type\": \"System\",\n            \"isRead\": true,\n            \"createdAt\": \"2026-06-02T09:18:29.912Z\",\n            \"updatedAt\": \"2026-06-02T09:18:39.238Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "get financial-report pdf",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc4MDY0NDI0NywiZXhwIjoxNzgwNjQ1MTQ3fQ.6O5lpKDA5BhlkAVa4TQ92gsnypJLlykqufErav0T4r4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"category\":\"Food\",\r\n   \"amount\":10000,\r\n   \"month\":5,\r\n   \"year\":2026\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/report/financial-report",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "report",
+            "financial-report"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "verify-subscription",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc4MDY0NDI0NywiZXhwIjoxNzgwNjQ1MTQ3fQ.6O5lpKDA5BhlkAVa4TQ92gsnypJLlykqufErav0T4r4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"sessionId\": \"cs_test_a1JapUvGVRICcSPCOZP5Ip2NmWEmGKQuiIKYrjjfSnnzlr9gMy3OquHXCK\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/subscription/verify-subscription",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "subscription",
+            "verify-subscription"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "verify-subscription",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"sessionId\": \"cs_test_a1JapUvGVRICcSPCOZP5Ip2NmWEmGKQuiIKYrjjfSnnzlr9gMy3OquHXCK\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/subscription/verify-subscription",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "subscription",
+                "verify-subscription"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "191"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"bf-VGuQCpJyOLkE40mo6dwu89Lepxc\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 05 Jun 2026 07:25:04 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Premium subscription activated successfully\",\n    \"subscription\": {\n        \"plan\": \"premium\",\n        \"status\": \"active\",\n        \"trialEndsAt\": null,\n        \"subscriptionEndsAt\": \"2026-07-05T07:25:04.166Z\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "get all goals",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc4MDY0NDI0NywiZXhwIjoxNzgwNjQ1MTQ3fQ.6O5lpKDA5BhlkAVa4TQ92gsnypJLlykqufErav0T4r4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Goa Trip\",\r\n  \"targetAmount\": 50000,\r\n  \"savedAmount\": 10000,\r\n  \"deadline\": \"2026-12-31\",\r\n  \"category\": \"Travel\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/goal/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "goal",
+            "all"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get all goals",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Goa Trip\",\r\n  \"targetAmount\": 50000,\r\n  \"savedAmount\": 10000,\r\n  \"deadline\": \"2026-12-31\",\r\n  \"category\": \"Travel\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/goal/all",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "goal",
+                "all"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "628"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"274-aEl86avzpMYxCXdRUPYo7gehVhY\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 05 Jun 2026 07:25:53 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"count\": 2,\n    \"data\": [\n        {\n            \"_id\": \"6a16d31187bbb46766e54e91\",\n            \"user\": \"6a12bf9ec708f516d1e0ae64\",\n            \"title\": \"Buy Car\",\n            \"targetAmount\": 1000000,\n            \"savedAmount\": 100000,\n            \"deadline\": \"2027-05-14T00:00:00.000Z\",\n            \"category\": \"Vehicle\",\n            \"status\": \"In Progress\",\n            \"createdAt\": \"2026-05-27T11:18:41.975Z\",\n            \"updatedAt\": \"2026-05-27T11:18:41.975Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a16d1c187bbb46766e54e90\",\n            \"user\": \"6a12bf9ec708f516d1e0ae64\",\n            \"title\": \"Goa Trip\",\n            \"targetAmount\": 50000,\n            \"savedAmount\": 50000,\n            \"deadline\": \"2026-12-31T00:00:00.000Z\",\n            \"category\": \"Travel\",\n            \"status\": \"Completed\",\n            \"createdAt\": \"2026-05-27T11:13:05.183Z\",\n            \"updatedAt\": \"2026-06-02T06:41:01.186Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "admin dashboard",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJjMGY5YzcwOGY1MTZkMWUwYWU2NiIsImlhdCI6MTc4MDY0NDQyMSwiZXhwIjoxNzgwNjQ1MzIxfQ.8ypugKXBNz5MEjfpGooMuh-u5R7I_IyEXqm0pkwkT6w",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Goa Trip\",\r\n  \"targetAmount\": 50000,\r\n  \"savedAmount\": 10000,\r\n  \"deadline\": \"2026-12-31\",\r\n  \"category\": \"Travel\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/admin/dashboard",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "admin",
+            "dashboard"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "admin dashboard",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Goa Trip\",\r\n  \"targetAmount\": 50000,\r\n  \"savedAmount\": 10000,\r\n  \"deadline\": \"2026-12-31\",\r\n  \"category\": \"Travel\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/admin/dashboard",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "admin",
+                "dashboard"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1000"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"3e8-KqDtSqEXFsGgOlOv+AcZ+w12gFk\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 05 Jun 2026 07:27:10 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"totalUsers\": 5,\n        \"verifiedUsers\": 5,\n        \"blockedUsers\": 0,\n        \"premiumUsers\": 2,\n        \"trialUsers\": 3,\n        \"activeSubscriptions\": 2,\n        \"premiumPlanPrice\": 299,\n        \"monthlyRevenue\": 598,\n        \"yearlyRevenue\": 7176,\n        \"recentUsers\": [\n            {\n                \"subscription\": {\n                    \"plan\": \"trial\"\n                },\n                \"_id\": \"6a20490e28318d76178bb14f\",\n                \"name\": \"Namita\",\n                \"email\": \"namita45@yopmail.com\",\n                \"createdAt\": \"2026-06-03T15:32:30.648Z\"\n            },\n            {\n                \"subscription\": {\n                    \"plan\": \"trial\"\n                },\n                \"_id\": \"6a1e9fa46cdf7bb28545fa89\",\n                \"name\": \"Manish Pandey\",\n                \"email\": \"manishpandey@yopmail.com\",\n                \"createdAt\": \"2026-06-02T09:17:24.253Z\"\n            },\n            {\n                \"subscription\": {\n                    \"plan\": \"trial\"\n                },\n                \"_id\": \"6a19225f463ef819cfc73c33\",\n                \"name\": \"John Doe\",\n                \"email\": \"john5555@yopmail.com\",\n                \"createdAt\": \"2026-05-29T05:21:35.458Z\"\n            },\n            {\n                \"subscription\": {\n                    \"plan\": \"premium\"\n                },\n                \"_id\": \"6a17e88d99411616a2c42e39\",\n                \"name\": \"Raju Singh\",\n                \"email\": \"rajusingh65@yopmail.com\",\n                \"createdAt\": \"2026-05-28T07:02:37.855Z\"\n            },\n            {\n                \"subscription\": {\n                    \"plan\": \"premium\"\n                },\n                \"_id\": \"6a12bf9ec708f516d1e0ae64\",\n                \"name\": \"rahul\",\n                \"email\": \"rahul512@yopmail.com\",\n                \"createdAt\": \"2026-05-24T09:06:38.139Z\"\n            }\n        ]\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "ai insights",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc4MDY0NDUwMCwiZXhwIjoxNzgwNjQ1NDAwfQ.-TsmIeBEt7r-KsHUBnj1T41sORY9CM6N5xNfj2ZM2l8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Goa Trip\",\r\n  \"targetAmount\": 50000,\r\n  \"savedAmount\": 10000,\r\n  \"deadline\": \"2026-12-31\",\r\n  \"category\": \"Travel\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/ai/insights",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "ai",
+            "insights"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "ai insights",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Goa Trip\",\r\n  \"targetAmount\": 50000,\r\n  \"savedAmount\": 10000,\r\n  \"deadline\": \"2026-12-31\",\r\n  \"category\": \"Travel\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/ai/insights",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "ai",
+                "insights"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "73"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"49-HJA1cPWy3hsWV8JexA6UCJdVly8\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 05 Jun 2026 07:28:30 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"insights\": [\n        \"Excellent savings performance this month.\"\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "get financial-score",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc4MDY0NDUwMCwiZXhwIjoxNzgwNjQ1NDAwfQ.-TsmIeBEt7r-KsHUBnj1T41sORY9CM6N5xNfj2ZM2l8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Goa Trip\",\r\n  \"targetAmount\": 50000,\r\n  \"savedAmount\": 10000,\r\n  \"deadline\": \"2026-12-31\",\r\n  \"category\": \"Travel\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/ai/financial-score",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "ai",
+            "financial-score"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get financial-score",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Goa Trip\",\r\n  \"targetAmount\": 50000,\r\n  \"savedAmount\": 10000,\r\n  \"deadline\": \"2026-12-31\",\r\n  \"category\": \"Travel\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/ai/financial-score",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "ai",
+                "financial-score"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "49"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"31-ZKuR0lK31SCanb9uRTSyYE5ctug\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 05 Jun 2026 07:29:02 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"score\": 105,\n    \"status\": \"Excellent\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "get spending-analysis",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc4MDY0NDUwMCwiZXhwIjoxNzgwNjQ1NDAwfQ.-TsmIeBEt7r-KsHUBnj1T41sORY9CM6N5xNfj2ZM2l8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Goa Trip\",\r\n  \"targetAmount\": 50000,\r\n  \"savedAmount\": 10000,\r\n  \"deadline\": \"2026-12-31\",\r\n  \"category\": \"Travel\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/ai/spending-analysis",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "ai",
+            "spending-analysis"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get spending-analysis",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Goa Trip\",\r\n  \"targetAmount\": 50000,\r\n  \"savedAmount\": 10000,\r\n  \"deadline\": \"2026-12-31\",\r\n  \"category\": \"Travel\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/ai/spending-analysis",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "ai",
+                "spending-analysis"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "112"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"70-Dvu3YpFiEQqKItJEeEJ5l9OslNk\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 05 Jun 2026 07:29:32 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"totalExpense\": 73958,\n    \"totalIncome\": 140000,\n    \"savings\": 66042,\n    \"expenseRatio\": \"52.8\",\n    \"status\": \"Good\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "savings-tips",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc4MDY0NDUwMCwiZXhwIjoxNzgwNjQ1NDAwfQ.-TsmIeBEt7r-KsHUBnj1T41sORY9CM6N5xNfj2ZM2l8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Goa Trip\",\r\n  \"targetAmount\": 50000,\r\n  \"savedAmount\": 10000,\r\n  \"deadline\": \"2026-12-31\",\r\n  \"category\": \"Travel\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/ai/savings-tips",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "ai",
+            "savings-tips"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "savings-tips",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Goa Trip\",\r\n  \"targetAmount\": 50000,\r\n  \"savedAmount\": 10000,\r\n  \"deadline\": \"2026-12-31\",\r\n  \"category\": \"Travel\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/ai/savings-tips",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "ai",
+                "savings-tips"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "293"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"125-EJ8PbQw92D9UxTyrKTPS8ml7rQ8\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 05 Jun 2026 07:29:53 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"totalIncome\": 140000,\n    \"totalExpense\": 73958,\n    \"savings\": 66042,\n    \"tips\": [\n        \"Shopping expenses are significantly high. Focus on planned purchases.\",\n        \"You have healthy savings. Consider investing in SIPs or mutual funds.\",\n        \"Build an emergency fund covering at least 6 months of expenses.\"\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "ai chat",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJiZjllYzcwOGY1MTZkMWUwYWU2NCIsImlhdCI6MTc4MDY0NDUwMCwiZXhwIjoxNzgwNjQ1NDAwfQ.-TsmIeBEt7r-KsHUBnj1T41sORY9CM6N5xNfj2ZM2l8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"message\":\"How can I reduce food expenses?\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/ai/chat",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "ai",
+            "chat"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "ai chat",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjA3NzJlY2VlOGRhODkyZTc1MjdjOCIsIm5hbWUiOiJyYWh1bCIsImVtYWlsIjoicmFodWw1MTJAeW9wbWFpbC5jb20iLCJjaXR5IjoidXAiLCJpYXQiOjE3NzczNjkyODEsImV4cCI6MTc3NzM3Mjg4MX0.3jDBk6OZE54PhZ3RFhy_rjmv0D7bW3nJY_c2cM2Qjx8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"message\":\"How can I reduce food expenses?\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/ai/chat",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "ai",
+                "chat"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "341"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"155-/M+eE4ZdXLzyunZP90vHOMpHBzE\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 05 Jun 2026 07:31:05 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"reply\": \"To reduce food expenses, consider:\\n\\n1. Meal planning and grocery lists.\\n2. Cooking at home instead of eating out.\\n3. Buying in bulk and using coupons.\\n4. Avoiding processed and pre-packaged foods.\\n5. Using cashback apps for grocery purchases.\\n\\nSave up to 30% on food bills by implementing these strategies.\"\n}"
+        }
+      ]
+    }
+  ]
+}
